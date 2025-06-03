@@ -48,37 +48,6 @@ const Index = () => {
     }
   ];
 
-  const projects = [
-    {
-      title: "Site E-commerce Bigpel",
-      description: "E-commerce completo para líder nacional em sacolas para confeitaria com mais de 100 mil vendas mensais",
-      image: "/lovable-uploads/9f05ccfa-c36d-4e93-804c-e7bc22503f38.png",
-      tags: ["E-commerce", "Gestão de Tráfego", "Growth Marketing"],
-      link: "https://bigpel.com/"
-    },
-    {
-      title: "XT Box - E-commerce Produtos Decorativos",
-      description: "Loja online especializada em produtos decorativos e iluminação com sistema de avaliações",
-      image: "/lovable-uploads/ab0461d9-94db-44dc-a208-df677b9b2a2c.png",
-      tags: ["E-commerce", "Design UI/UX", "Marketing Digital"],
-      link: "https://shopee.com.br/xt_box?entryPoint=ShopBySearch&searchKeyword=xtbox"
-    },
-    {
-      title: "CT Box - Iluminação Especializada",
-      description: "E-commerce focado em iluminação decorativa e produtos LED com alto volume de vendas",
-      image: "/lovable-uploads/e402083f-d5cf-42d4-88d0-5a9366b7b232.png",
-      tags: ["E-commerce", "Iluminação", "Conversão"],
-      link: "https://shopee.com.br/ct_box?entryPoint=ShopBySearch&searchKeyword=ct%20box"
-    },
-    {
-      title: "EVTec Store - Tecnologia LED",
-      description: "Loja especializada em produtos tecnológicos e soluções LED para diversos segmentos",
-      image: "/lovable-uploads/b9fdcfac-b8e0-42f8-9a5c-a80f976a32a3.png",
-      tags: ["E-commerce", "Tecnologia", "LED"],
-      link: "https://shopee.com.br/evtecstore?entryPoint=ShopBySearch&searchKeyword=evtec%20store&is_from_signup=true"
-    }
-  ];
-
   const skills = [
     { category: "Marketing Digital", items: ["Gestor de Tráfego", "Growth Marketing", "SEO", "E-commerce", "Funil de Vendas"] },
     { category: "Design", items: ["Design Gráfico", "Design de Embalagem", "Ilustração Digital", "Motion Graphics"] },
@@ -93,34 +62,48 @@ const Index = () => {
     { name: "Cont.com Contabilidade", url: "https://www.instagram.com/contcomcontabilidade/", description: "Serviços contábeis especializados" }
   ];
 
-  const socialMediaGrowth = [
+  const analyticsGallery = [
     {
-      title: "Bigpel Fábrica - Crescimento Exponencial",
-      description: "Transformação de uma pequena fábrica em referência nacional com milhares de seguidores",
-      image: "/lovable-uploads/9f05ccfa-c36d-4e93-804c-e7bc22503f38.png",
-      metrics: "+500% seguidores",
-      period: "12 meses"
+      title: "Crescimento de Engajamento",
+      description: "Métricas de visualizações e interações com crescimento exponencial",
+      image: "/lovable-uploads/a2ac58dc-d2ab-49c0-96fc-4294c4cc9f13.png",
+      metrics: "+3233% crescimento",
+      period: "90 dias"
     },
     {
-      title: "EVTec Store - Engajamento Premium",
-      description: "Estratégia focada em produtos tecnológicos com alta conversão",
-      image: "/lovable-uploads/b9fdcfac-b8e0-42f8-9a5c-a80f976a32a3.png",
-      metrics: "+300% engajamento",
-      period: "8 meses"
+      title: "Performance de Conteúdo",
+      description: "Análise detalhada do desempenho das publicações orgânicas",
+      image: "/lovable-uploads/b4063b3b-e6d5-4855-82c9-68b3c2331449.png",
+      metrics: "+2950% visualizações",
+      period: "Últimos 90 dias"
     },
     {
-      title: "XT Box - Crescimento em Decoração",
-      description: "Posicionamento como referência em produtos decorativos e iluminação",
-      image: "/lovable-uploads/ab0461d9-94db-44dc-a208-df677b9b2a2c.png",
-      metrics: "+200% leads qualificados",
-      period: "6 meses"
+      title: "Crescimento de Alcance",
+      description: "Evolução do alcance nas principais plataformas sociais",
+      image: "/lovable-uploads/bdf740a0-7818-4e82-8073-aa3691c84feb.png",
+      metrics: "1.1 mil alcance",
+      period: "8.4% crescimento"
     },
     {
-      title: "CT Box - Autoridade em Iluminação",
-      description: "Construção de marca especializada em soluções LED premium",
-      image: "/lovable-uploads/e402083f-d5cf-42d4-88d0-5a9366b7b232.png",
-      metrics: "+400% alcance",
-      period: "10 meses"
+      title: "Análise de Insights",
+      description: "Relatórios detalhados de performance no Facebook e Instagram",
+      image: "/lovable-uploads/c5fa9910-9ea8-4be4-a7d4-ca88ba0d9a39.png",
+      metrics: "806.4% Facebook | 13.8% Instagram",
+      period: "Últimos 90 dias"
+    },
+    {
+      title: "Meta de Seguidores",
+      description: "Aumento estratégico no número de seguidores do Instagram",
+      image: "/lovable-uploads/05586f03-0260-4178-9f4f-ee3ab268582c.png",
+      metrics: "105% da meta atingida",
+      period: "21 dias"
+    },
+    {
+      title: "Crescimento Comparativo",
+      description: "Análise comparativa de crescimento entre plataformas",
+      image: "/lovable-uploads/2b750dcc-3d4b-42f7-a7f5-ff1bf202befc.png",
+      metrics: "675.5% Facebook | 297.7% Instagram",
+      period: "28 dias"
     }
   ];
 
@@ -134,7 +117,6 @@ const Index = () => {
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-white/80 hover:text-white transition-colors">Sobre</a>
               <a href="#experience" className="text-white/80 hover:text-white transition-colors">Experiência</a>
-              <a href="#projects" className="text-white/80 hover:text-white transition-colors">Projetos</a>
               <a href="#cv" className="text-white/80 hover:text-white transition-colors">Currículo</a>
               <a href="#growth" className="text-white/80 hover:text-white transition-colors">Crescimento</a>
               <a href="#social" className="text-white/80 hover:text-white transition-colors">Redes Sociais</a>
@@ -267,76 +249,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Portfólio de Projetos E-commerce</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-lg hover:transform hover:scale-105 transition-all duration-300 group">
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-white">{project.title}</CardTitle>
-                  <CardDescription className="text-gray-300">{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, i) => (
-                      <Badge key={i} className="bg-blue-600/20 text-blue-400 border-blue-400/30">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  {project.link && (
-                    <Button 
-                      variant="outline" 
-                      className="border-white/20 text-white hover:bg-white/10 w-full"
-                      onClick={() => window.open(project.link, '_blank')}
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Visitar Loja
-                    </Button>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <p className="text-gray-300 mb-4">Especialista em E-commerce com resultados comprovados:</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <Card className="bg-white/10 border-white/20 backdrop-blur-lg">
-                <CardContent className="p-6 text-center">
-                  <TrendingUp className="w-8 h-8 text-green-400 mx-auto mb-4" />
-                  <h4 className="text-2xl font-bold text-white mb-2">+300%</h4>
-                  <p className="text-gray-300">Crescimento Médio</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/10 border-white/20 backdrop-blur-lg">
-                <CardContent className="p-6 text-center">
-                  <Users className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-                  <h4 className="text-2xl font-bold text-white mb-2">4+</h4>
-                  <p className="text-gray-300">Lojas Gerenciadas</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white/10 border-white/20 backdrop-blur-lg">
-                <CardContent className="p-6 text-center">
-                  <Award className="w-8 h-8 text-purple-400 mx-auto mb-4" />
-                  <h4 className="text-2xl font-bold text-white mb-2">100k+</h4>
-                  <p className="text-gray-300">Vendas Mensais</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CV Section */}
       <section id="cv" className="py-20 px-4 bg-black/20">
         <div className="container mx-auto">
@@ -376,46 +288,45 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Social Media Growth Gallery Section */}
+      {/* Analytics Gallery Section */}
       <section id="growth" className="py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">
             <BarChart3 className="w-10 h-10 mx-auto mb-4 text-blue-400" />
-            Galeria de Crescimento - Redes Sociais
+            Galeria de Crescimento - Analytics das Redes Sociais
           </h2>
           <p className="text-gray-300 text-center max-w-3xl mx-auto mb-12">
-            Resultados comprovados na gestão e crescimento de perfis nas redes sociais. 
-            Cada projeto representa uma estratégia personalizada com foco em conversão e engajamento.
+            Evidências reais do crescimento obtido na gestão de perfis nas redes sociais. 
+            Cada imagem representa resultados mensuráveis com métricas de performance comprovadas.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {socialMediaGrowth.map((growth, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {analyticsGallery.map((analytics, index) => (
               <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-lg hover:transform hover:scale-105 transition-all duration-300 group overflow-hidden">
                 <div className="relative overflow-hidden">
                   <img 
-                    src={growth.image} 
-                    alt={growth.title}
-                    className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-300"
-                    style={{ objectPosition: '50% 20%' }}
+                    src={analytics.image} 
+                    alt={analytics.title}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex justify-between items-end">
                       <div>
                         <Badge className="bg-green-600/80 text-green-100 border-green-400/50 mb-2">
-                          {growth.metrics}
+                          {analytics.metrics}
                         </Badge>
                         <Badge className="bg-blue-600/80 text-blue-100 border-blue-400/50 ml-2">
-                          {growth.period}
+                          {analytics.period}
                         </Badge>
                       </div>
-                      <Instagram className="w-8 h-8 text-pink-400" />
+                      <BarChart3 className="w-8 h-8 text-blue-400" />
                     </div>
                   </div>
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-white text-lg">{growth.title}</CardTitle>
-                  <CardDescription className="text-gray-300">{growth.description}</CardDescription>
+                  <CardTitle className="text-white text-lg">{analytics.title}</CardTitle>
+                  <CardDescription className="text-gray-300">{analytics.description}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -426,22 +337,22 @@ const Index = () => {
             <Card className="bg-white/10 border-white/20 backdrop-blur-lg text-center">
               <CardContent className="p-6">
                 <TrendingUp className="w-8 h-8 text-green-400 mx-auto mb-4" />
-                <h4 className="text-2xl font-bold text-white mb-2">+400%</h4>
-                <p className="text-gray-300">Crescimento Médio</p>
+                <h4 className="text-2xl font-bold text-white mb-2">+3233%</h4>
+                <p className="text-gray-300">Crescimento Recorde</p>
               </CardContent>
             </Card>
             <Card className="bg-white/10 border-white/20 backdrop-blur-lg text-center">
               <CardContent className="p-6">
                 <Users className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-                <h4 className="text-2xl font-bold text-white mb-2">50k+</h4>
-                <p className="text-gray-300">Seguidores Gerados</p>
+                <h4 className="text-2xl font-bold text-white mb-2">4</h4>
+                <p className="text-gray-300">Perfis Administrados</p>
               </CardContent>
             </Card>
             <Card className="bg-white/10 border-white/20 backdrop-blur-lg text-center">
               <CardContent className="p-6">
                 <Target className="w-8 h-8 text-purple-400 mx-auto mb-4" />
-                <h4 className="text-2xl font-bold text-white mb-2">4</h4>
-                <p className="text-gray-300">Perfis Transformados</p>
+                <h4 className="text-2xl font-bold text-white mb-2">105%</h4>
+                <p className="text-gray-300">Meta Superada</p>
               </CardContent>
             </Card>
             <Card className="bg-white/10 border-white/20 backdrop-blur-lg text-center">
