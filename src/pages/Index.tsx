@@ -93,6 +93,13 @@ const Index = () => {
     { name: "Loja 4 - Em Breve", url: "#", description: "Design e embalagens" }
   ];
 
+  const socialMediaLinks = [
+    { name: "Bigpel Fábrica", url: "https://www.instagram.com/bigpel_fabrica/", description: "Perfil oficial da fábrica de embalagens" },
+    { name: "Adriano Pereira Oficial", url: "https://www.instagram.com/adrianopereira_oficial/", description: "Perfil pessoal e profissional" },
+    { name: "EVTec Store", url: "https://www.instagram.com/evtecstore/", description: "Produtos tecnológicos e LED" },
+    { name: "Cont.com Contabilidade", url: "https://www.instagram.com/contcomcontabilidade/", description: "Serviços contábeis especializados" }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
@@ -364,6 +371,34 @@ const Index = () => {
                     disabled
                   >
                     Em Breve
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media Links Section */}
+      <section id="social" className="py-20 px-4 bg-black/20">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-white text-center mb-16">Mídias Sociais</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {socialMediaLinks.map((link, index) => (
+              <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-lg hover:bg-white/15 transition-all duration-300 text-center">
+                <CardContent className="p-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <ExternalLink className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">{link.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{link.description}</p>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="border-white/20 text-white hover:bg-white/10 w-full"
+                    onClick={() => window.open(link.url, '_blank')}
+                  >
+                    Seguir no Instagram
                   </Button>
                 </CardContent>
               </Card>
