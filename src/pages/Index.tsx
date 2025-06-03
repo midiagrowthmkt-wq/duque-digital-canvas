@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Award, TrendingUp, Users, Target, Palette, Code, Download, Eye, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Award, TrendingUp, Users, Target, Palette, Code, Download, Eye, Globe, Settings } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import CVViewer from '@/components/CVViewer';
+import AdminPanel from '@/components/AdminPanel';
 
 const Index = () => {
   const [activeProject, setActiveProject] = useState(0);
   const [showCV, setShowCV] = useState(false);
+  const [showAdmin, setShowAdmin] = useState(false);
 
   const experiences = [
     {
@@ -55,22 +57,22 @@ const Index = () => {
       link: "https://bigpel.com/"
     },
     {
-      title: "Mundial de Futebol de Rua 2014",
-      description: "Coordenação de evento internacional com ampla divulgação midiática",
-      image: "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?w=500&h=300&fit=crop",
-      tags: ["Gestão de Projetos", "Marketing", "Eventos"]
+      title: "XT Box - E-commerce Produtos Decorativos",
+      description: "Loja online especializada em produtos decorativos e iluminação com sistema de avaliações",
+      image: "/lovable-uploads/ab0461d9-94db-44dc-a208-df677b9b2a2c.png",
+      tags: ["E-commerce", "Design UI/UX", "Marketing Digital"]
     },
     {
-      title: "Design de Embalagens Premium",
-      description: "Criação de embalagens para produtos de alto padrão e tecnologia",
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500&h=300&fit=crop",
-      tags: ["Design de Produto", "Embalagem", "Branding"]
+      title: "CT Box - Iluminação Especializada",
+      description: "E-commerce focado em iluminação decorativa e produtos LED com alto volume de vendas",
+      image: "/lovable-uploads/e402083f-d5cf-42d4-88d0-5a9366b7b232.png",
+      tags: ["E-commerce", "Iluminação", "Conversão"]
     },
     {
-      title: "Aplicações SaaS",
-      description: "Desenvolvimento de soluções SaaS com integração de IA para marketing",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-      tags: ["SaaS", "IA", "Desenvolvimento"]
+      title: "EVTec Store - Tecnologia LED",
+      description: "Loja especializada em produtos tecnológicos e soluções LED para diversos segmentos",
+      image: "/lovable-uploads/b9fdcfac-b8e0-42f8-9a5c-a80f976a32a3.png",
+      tags: ["E-commerce", "Tecnologia", "LED"]
     }
   ];
 
@@ -102,6 +104,14 @@ const Index = () => {
               <a href="#cv" className="text-white/80 hover:text-white transition-colors">Currículo</a>
               <a href="#ecommerce" className="text-white/80 hover:text-white transition-colors">E-commerce</a>
               <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contato</a>
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => setShowAdmin(true)}
+                className="text-white/60 hover:text-white hover:bg-white/10"
+              >
+                <Settings className="w-4 h-4" />
+              </Button>
             </div>
           </div>
         </div>
@@ -225,7 +235,7 @@ const Index = () => {
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Portfólio de Projetos</h2>
+          <h2 className="text-4xl font-bold text-white text-center mb-16">Portfólio de Projetos E-commerce</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-lg hover:transform hover:scale-105 transition-all duration-300 group">
@@ -264,16 +274,29 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <p className="text-gray-300 mb-4">Veja mais trabalhos em:</p>
-            <div className="flex justify-center space-x-4">
-              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Behance Portfolio
-              </Button>
-              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Portfolio 2020
-              </Button>
+            <p className="text-gray-300 mb-4">Especialista em E-commerce com resultados comprovados:</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <Card className="bg-white/10 border-white/20 backdrop-blur-lg">
+                <CardContent className="p-6 text-center">
+                  <TrendingUp className="w-8 h-8 text-green-400 mx-auto mb-4" />
+                  <h4 className="text-2xl font-bold text-white mb-2">+300%</h4>
+                  <p className="text-gray-300">Crescimento Médio</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white/10 border-white/20 backdrop-blur-lg">
+                <CardContent className="p-6 text-center">
+                  <Users className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+                  <h4 className="text-2xl font-bold text-white mb-2">4+</h4>
+                  <p className="text-gray-300">Lojas Gerenciadas</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white/10 border-white/20 backdrop-blur-lg">
+                <CardContent className="p-6 text-center">
+                  <Award className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+                  <h4 className="text-2xl font-bold text-white mb-2">100k+</h4>
+                  <p className="text-gray-300">Vendas Mensais</p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
@@ -462,6 +485,14 @@ const Index = () => {
         <CVViewer 
           isOpen={showCV} 
           onClose={() => setShowCV(false)} 
+        />
+      )}
+
+      {/* Admin Panel Modal */}
+      {showAdmin && (
+        <AdminPanel 
+          isOpen={showAdmin} 
+          onClose={() => setShowAdmin(false)} 
         />
       )}
     </div>
