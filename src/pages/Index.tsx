@@ -1,12 +1,14 @@
-
 import { useState } from 'react';
-import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Award, TrendingUp, Users, Target, Palette, Code } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Award, TrendingUp, Users, Target, Palette, Code, Download, Eye, Globe } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import CVViewer from '@/components/CVViewer';
 
 const Index = () => {
   const [activeProject, setActiveProject] = useState(0);
+  const [showCV, setShowCV] = useState(false);
 
   const experiences = [
     {
@@ -96,6 +98,7 @@ const Index = () => {
               <a href="#about" className="text-white/80 hover:text-white transition-colors">Sobre</a>
               <a href="#experience" className="text-white/80 hover:text-white transition-colors">Experiência</a>
               <a href="#projects" className="text-white/80 hover:text-white transition-colors">Projetos</a>
+              <a href="#cv" className="text-white/80 hover:text-white transition-colors">Currículo</a>
               <a href="#ecommerce" className="text-white/80 hover:text-white transition-colors">E-commerce</a>
               <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contato</a>
             </div>
@@ -122,8 +125,13 @@ const Index = () => {
               <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg">
                 Ver Projetos
               </Button>
-              <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 px-8 py-3 text-lg">
-                Baixar CV
+              <Button 
+                variant="outline" 
+                className="border-white/20 text-white hover:bg-white/10 px-8 py-3 text-lg"
+                onClick={() => setShowCV(true)}
+              >
+                <Eye className="w-4 h-4 mr-2" />
+                Ver Currículo
               </Button>
             </div>
           </div>
@@ -256,6 +264,45 @@ const Index = () => {
                 Portfolio 2020
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CV Section */}
+      <section id="cv" className="py-20 px-4 bg-black/20">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-white text-center mb-16">Currículo Profissional</h2>
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-white/10 border-white/20 backdrop-blur-lg">
+              <CardHeader className="text-center">
+                <CardTitle className="text-white text-2xl mb-4">
+                  <Globe className="w-8 h-8 mx-auto mb-4 text-blue-400" />
+                  Visualizar Currículo
+                </CardTitle>
+                <CardDescription className="text-gray-300">
+                  Disponível em múltiplos idiomas para oportunidades internacionais
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
+                  <Button 
+                    onClick={() => setShowCV(true)}
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                  >
+                    <Eye className="w-4 h-4 mr-2" />
+                    Visualizar CV
+                  </Button>
+                </div>
+                <div className="text-center">
+                  <p className="text-gray-400 mb-4">Idiomas disponíveis:</p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <Badge className="bg-green-600/20 text-green-400 border-green-400/30">Português</Badge>
+                    <Badge className="bg-blue-600/20 text-blue-400 border-blue-400/30">English</Badge>
+                    <Badge className="bg-purple-600/20 text-purple-400 border-purple-400/30">Français</Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -398,6 +445,14 @@ const Index = () => {
           </p>
         </div>
       </footer>
+
+      {/* CV Viewer Modal */}
+      {showCV && (
+        <CVViewer 
+          isOpen={showCV} 
+          onClose={() => setShowCV(false)} 
+        />
+      )}
     </div>
   );
 };
