@@ -86,13 +86,6 @@ const Index = () => {
     { category: "Criação", items: ["Edição de Vídeos", "Animação", "3D Modeling", "Fotografia"] }
   ];
 
-  const ecommerceLinks = [
-    { name: "Loja 1 - Em Breve", url: "#", description: "E-commerce de confeitaria" },
-    { name: "Loja 2 - Em Breve", url: "#", description: "Produtos de iluminação" },
-    { name: "Loja 3 - Em Breve", url: "#", description: "Tecnologia premium" },
-    { name: "Loja 4 - Em Breve", url: "#", description: "Design e embalagens" }
-  ];
-
   const socialMediaLinks = [
     { name: "Bigpel Fábrica", url: "https://www.instagram.com/bigpel_fabrica/", description: "Perfil oficial da fábrica de embalagens" },
     { name: "Adriano Pereira Oficial", url: "https://www.instagram.com/adrianopereira_oficial/", description: "Perfil pessoal e profissional" },
@@ -104,28 +97,28 @@ const Index = () => {
     {
       title: "Bigpel Fábrica - Crescimento Exponencial",
       description: "Transformação de uma pequena fábrica em referência nacional com milhares de seguidores",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      image: "/lovable-uploads/9f05ccfa-c36d-4e93-804c-e7bc22503f38.png",
       metrics: "+500% seguidores",
       period: "12 meses"
     },
     {
       title: "EVTec Store - Engajamento Premium",
       description: "Estratégia focada em produtos tecnológicos com alta conversão",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      image: "/lovable-uploads/b9fdcfac-b8e0-42f8-9a5c-a80f976a32a3.png",
       metrics: "+300% engajamento",
       period: "8 meses"
     },
     {
-      title: "Cont.com Contabilidade - Autoridade Digital",
-      description: "Posicionamento como referência em serviços contábeis especializados",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      title: "XT Box - Crescimento em Decoração",
+      description: "Posicionamento como referência em produtos decorativos e iluminação",
+      image: "/lovable-uploads/ab0461d9-94db-44dc-a208-df677b9b2a2c.png",
       metrics: "+200% leads qualificados",
       period: "6 meses"
     },
     {
-      title: "Adriano Pereira - Personal Branding",
-      description: "Construção de marca pessoal e autoridade no mercado digital",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      title: "CT Box - Autoridade em Iluminação",
+      description: "Construção de marca especializada em soluções LED premium",
+      image: "/lovable-uploads/e402083f-d5cf-42d4-88d0-5a9366b7b232.png",
       metrics: "+400% alcance",
       period: "10 meses"
     }
@@ -458,34 +451,6 @@ const Index = () => {
                 <p className="text-gray-300">Taxa de Sucesso</p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* E-commerce Links Section */}
-      <section id="ecommerce" className="py-20 px-4 bg-black/20">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Lojas E-commerce</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {ecommerceLinks.map((link, index) => (
-              <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-lg hover:bg-white/15 transition-all duration-300 text-center">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <ExternalLink className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">{link.name}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{link.description}</p>
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="border-white/20 text-white hover:bg-white/10 w-full"
-                    disabled
-                  >
-                    Em Breve
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
