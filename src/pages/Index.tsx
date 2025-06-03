@@ -46,19 +46,13 @@ const Index = () => {
     }
   ];
 
-  const skills = [
-    { category: "Marketing Digital", items: ["Gestor de Tráfego", "Growth Marketing", "SEO", "E-commerce", "Funil de Vendas"] },
-    { category: "Design", items: ["Design Gráfico", "Design de Embalagem", "Ilustração Digital", "Motion Graphics"] },
-    { category: "Tecnologia", items: ["HTML5", "C++", "Inteligência Artificial", "SaaS", "Automações"] },
-    { category: "Criação", items: ["Edição de Vídeos", "Animação", "3D Modeling", "Fotografia"] }
-  ];
-
   const projects = [
     {
-      title: "Campanha Bigpel - E-commerce",
-      description: "Gestão completa de campanhas que resultou em mais de 100 mil vendas mensais",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-      tags: ["Gestão de Tráfego", "E-commerce", "Growth Marketing"]
+      title: "Site E-commerce Bigpel",
+      description: "E-commerce completo para líder nacional em sacolas para confeitaria com mais de 100 mil vendas mensais",
+      image: "/lovable-uploads/9f05ccfa-c36d-4e93-804c-e7bc22503f38.png",
+      tags: ["E-commerce", "Gestão de Tráfego", "Growth Marketing"],
+      link: "https://bigpel.com/"
     },
     {
       title: "Mundial de Futebol de Rua 2014",
@@ -78,6 +72,13 @@ const Index = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
       tags: ["SaaS", "IA", "Desenvolvimento"]
     }
+  ];
+
+  const skills = [
+    { category: "Marketing Digital", items: ["Gestor de Tráfego", "Growth Marketing", "SEO", "E-commerce", "Funil de Vendas"] },
+    { category: "Design", items: ["Design Gráfico", "Design de Embalagem", "Ilustração Digital", "Motion Graphics"] },
+    { category: "Tecnologia", items: ["HTML5", "C++", "Inteligência Artificial", "SaaS", "Automações"] },
+    { category: "Criação", items: ["Edição de Vídeos", "Animação", "3D Modeling", "Fotografia"] }
   ];
 
   const ecommerceLinks = [
@@ -241,13 +242,23 @@ const Index = () => {
                   <CardDescription className="text-gray-300">{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, i) => (
                       <Badge key={i} className="bg-blue-600/20 text-blue-400 border-blue-400/30">
                         {tag}
                       </Badge>
                     ))}
                   </div>
+                  {project.link && (
+                    <Button 
+                      variant="outline" 
+                      className="border-white/20 text-white hover:bg-white/10 w-full"
+                      onClick={() => window.open(project.link, '_blank')}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Visitar Site
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}
