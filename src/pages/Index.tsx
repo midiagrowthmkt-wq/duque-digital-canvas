@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Award, TrendingUp, Users, Target, Palette, Code, Download, Eye, Globe, Settings } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Github, Linkedin, Award, TrendingUp, Users, Target, Palette, Code, Download, Eye, Globe, Settings, Instagram, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -100,6 +100,37 @@ const Index = () => {
     { name: "Cont.com Contabilidade", url: "https://www.instagram.com/contcomcontabilidade/", description: "Serviços contábeis especializados" }
   ];
 
+  const socialMediaGrowth = [
+    {
+      title: "Bigpel Fábrica - Crescimento Exponencial",
+      description: "Transformação de uma pequena fábrica em referência nacional com milhares de seguidores",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      metrics: "+500% seguidores",
+      period: "12 meses"
+    },
+    {
+      title: "EVTec Store - Engajamento Premium",
+      description: "Estratégia focada em produtos tecnológicos com alta conversão",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      metrics: "+300% engajamento",
+      period: "8 meses"
+    },
+    {
+      title: "Cont.com Contabilidade - Autoridade Digital",
+      description: "Posicionamento como referência em serviços contábeis especializados",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      metrics: "+200% leads qualificados",
+      period: "6 meses"
+    },
+    {
+      title: "Adriano Pereira - Personal Branding",
+      description: "Construção de marca pessoal e autoridade no mercado digital",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80",
+      metrics: "+400% alcance",
+      period: "10 meses"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
@@ -112,7 +143,8 @@ const Index = () => {
               <a href="#experience" className="text-white/80 hover:text-white transition-colors">Experiência</a>
               <a href="#projects" className="text-white/80 hover:text-white transition-colors">Projetos</a>
               <a href="#cv" className="text-white/80 hover:text-white transition-colors">Currículo</a>
-              <a href="#ecommerce" className="text-white/80 hover:text-white transition-colors">E-commerce</a>
+              <a href="#growth" className="text-white/80 hover:text-white transition-colors">Crescimento</a>
+              <a href="#social" className="text-white/80 hover:text-white transition-colors">Redes Sociais</a>
               <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contato</a>
               <Button 
                 variant="ghost" 
@@ -351,6 +383,85 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Social Media Growth Gallery Section */}
+      <section id="growth" className="py-20 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-white text-center mb-16">
+            <BarChart3 className="w-10 h-10 mx-auto mb-4 text-blue-400" />
+            Galeria de Crescimento - Redes Sociais
+          </h2>
+          <p className="text-gray-300 text-center max-w-3xl mx-auto mb-12">
+            Resultados comprovados na gestão e crescimento de perfis nas redes sociais. 
+            Cada projeto representa uma estratégia personalizada com foco em conversão e engajamento.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {socialMediaGrowth.map((growth, index) => (
+              <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-lg hover:transform hover:scale-105 transition-all duration-300 group overflow-hidden">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={growth.image} 
+                    alt={growth.title}
+                    className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-300"
+                    style={{ objectPosition: '50% 20%' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="flex justify-between items-end">
+                      <div>
+                        <Badge className="bg-green-600/80 text-green-100 border-green-400/50 mb-2">
+                          {growth.metrics}
+                        </Badge>
+                        <Badge className="bg-blue-600/80 text-blue-100 border-blue-400/50 ml-2">
+                          {growth.period}
+                        </Badge>
+                      </div>
+                      <Instagram className="w-8 h-8 text-pink-400" />
+                    </div>
+                  </div>
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-white text-lg">{growth.title}</CardTitle>
+                  <CardDescription className="text-gray-300">{growth.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+
+          {/* Growth Statistics */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
+            <Card className="bg-white/10 border-white/20 backdrop-blur-lg text-center">
+              <CardContent className="p-6">
+                <TrendingUp className="w-8 h-8 text-green-400 mx-auto mb-4" />
+                <h4 className="text-2xl font-bold text-white mb-2">+400%</h4>
+                <p className="text-gray-300">Crescimento Médio</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/10 border-white/20 backdrop-blur-lg text-center">
+              <CardContent className="p-6">
+                <Users className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+                <h4 className="text-2xl font-bold text-white mb-2">50k+</h4>
+                <p className="text-gray-300">Seguidores Gerados</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/10 border-white/20 backdrop-blur-lg text-center">
+              <CardContent className="p-6">
+                <Target className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+                <h4 className="text-2xl font-bold text-white mb-2">4</h4>
+                <p className="text-gray-300">Perfis Transformados</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/10 border-white/20 backdrop-blur-lg text-center">
+              <CardContent className="p-6">
+                <Award className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
+                <h4 className="text-2xl font-bold text-white mb-2">100%</h4>
+                <p className="text-gray-300">Taxa de Sucesso</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* E-commerce Links Section */}
       <section id="ecommerce" className="py-20 px-4 bg-black/20">
         <div className="container mx-auto">
@@ -388,7 +499,7 @@ const Index = () => {
               <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-lg hover:bg-white/15 transition-all duration-300 text-center">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <ExternalLink className="w-8 h-8 text-white" />
+                    <Instagram className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">{link.name}</h3>
                   <p className="text-gray-400 text-sm mb-4">{link.description}</p>
