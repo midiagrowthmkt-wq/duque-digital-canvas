@@ -6,11 +6,13 @@ import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import CVViewer from '@/components/CVViewer';
 import AdminPanel from '@/components/AdminPanel';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
   const [activeProject, setActiveProject] = useState(0);
   const [showCV, setShowCV] = useState(false);
   const [showAdmin, setShowAdmin] = useState(false);
+  const navigate = useNavigate();
 
   const experiences = [
     {
@@ -19,9 +21,9 @@ const Index = () => {
       role: "Gestão de Marketing - Gestor de Tráfego",
       achievements: [
         "Crescimento expressivo tornando-se referência nacional em sacolas para confeitaria no Brasil",
-        "Mais de 100 mil vendas médias mensais",
         "Gestão completa de e-commerce e campanhas publicitárias",
-        "Criação de aplicações SaaS e implementação de IA em marketing"
+        "Criação de aplicações SaaS e implementação de IA em marketing",
+        "Desenvolvimento de estratégias de crescimento digital"
       ]
     },
     {
@@ -29,6 +31,7 @@ const Index = () => {
       period: "Junho 2022 - Maio 2025",
       role: "Designer de Embalagens e Designer Gráfico Digital",
       achievements: [
+        "Mais de 100 mil vendas mensais através de estratégias de marketing digital",
         "Coordenação de embalagens para produtos de alto padrão",
         "Gerenciamento de lojas digitais e criação de layouts",
         "Produção de vídeos promocionais e institucionais",
@@ -150,7 +153,10 @@ const Index = () => {
               criação de soluções SaaS inovadoras com IA.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg">
+              <Button 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg"
+                onClick={() => navigate('/produtos')}
+              >
                 Ver Projetos
               </Button>
               <Button 
