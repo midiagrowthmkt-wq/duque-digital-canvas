@@ -60,19 +60,22 @@ const Index = () => {
       title: "XT Box - E-commerce Produtos Decorativos",
       description: "Loja online especializada em produtos decorativos e iluminação com sistema de avaliações",
       image: "/lovable-uploads/ab0461d9-94db-44dc-a208-df677b9b2a2c.png",
-      tags: ["E-commerce", "Design UI/UX", "Marketing Digital"]
+      tags: ["E-commerce", "Design UI/UX", "Marketing Digital"],
+      link: "https://shopee.com.br/xt_box?entryPoint=ShopBySearch&searchKeyword=xtbox"
     },
     {
       title: "CT Box - Iluminação Especializada",
       description: "E-commerce focado em iluminação decorativa e produtos LED com alto volume de vendas",
       image: "/lovable-uploads/e402083f-d5cf-42d4-88d0-5a9366b7b232.png",
-      tags: ["E-commerce", "Iluminação", "Conversão"]
+      tags: ["E-commerce", "Iluminação", "Conversão"],
+      link: "https://shopee.com.br/ct_box?entryPoint=ShopBySearch&searchKeyword=ct%20box"
     },
     {
       title: "EVTec Store - Tecnologia LED",
       description: "Loja especializada em produtos tecnológicos e soluções LED para diversos segmentos",
       image: "/lovable-uploads/b9fdcfac-b8e0-42f8-9a5c-a80f976a32a3.png",
-      tags: ["E-commerce", "Tecnologia", "LED"]
+      tags: ["E-commerce", "Tecnologia", "LED"],
+      link: "https://shopee.com.br/evtecstore?entryPoint=ShopBySearch&searchKeyword=evtec%20store&is_from_signup=true"
     }
   ];
 
@@ -266,7 +269,7 @@ const Index = () => {
                       onClick={() => window.open(project.link, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
-                      Visitar Site
+                      Visitar Loja
                     </Button>
                   )}
                 </CardContent>
