@@ -167,6 +167,57 @@ const CVViewer = ({ isOpen, onClose }: CVViewerProps) => {
         title: "LANGUES",
         list: ["Portugais (Natif)", "Espagnol (Intermédiaire)", "Anglais (Basique)"]
       }
+    },
+    es: {
+      title: "CURRICULUM VITAE",
+      personalInfo: {
+        title: "INFORMACIÓN PERSONAL",
+        name: "Everton Duque dos Santos",
+        maritalStatus: "Casado",
+        age: "41 años",
+        address: "Rua 25 de Abril, 19, Cave Direita, 2625-602 Vialonga, Lisboa, Portugal",
+        phonePortugal: "+351 929 034 902",
+        phoneBrazil: "+55 11 96365-6618",
+        email: "duqueo7.ed@gmail.com"
+      },
+      professionalProfile: {
+        title: "PERFIL PROFESIONAL",
+        description: "Gestor de Marketing Digital especializado en Growth Marketing y tráfico pagado, con amplia experiencia en gestión de campañas multicanal e implementación de estrategias digitales. Sólida formación en e-commerce y automatización de marketing, complementada con conocimientos avanzados de herramientas de IA."
+      },
+      experience: {
+        title: "EXPERIENCIA PROFESIONAL",
+        jobs: [
+          {
+            title: "Gestor de Marketing Digital | Bigpel",
+            period: "2023 – Presente",
+            description: "Gestión de campañas publicitarias y estrategias de marketing digital. Responsable del crecimiento de la marca en el sector de confitería (100k+ ventas mensuales). Gestión de e-commerce, SEO y desarrollo web. Implementación de soluciones SaaS y automatizaciones de IA."
+          },
+          {
+            title: "Diseñador y Gestor Digital | Kizzol Comercial",
+            period: "2022 – 2025",
+            description: "Desarrollo y mantenimiento de tiendas online. Diseño de productos premium y tecnología. Coordinación de marketing digital y producción audiovisual."
+          }
+        ]
+      },
+      competencies: {
+        title: "COMPETENCIAS PRINCIPALES",
+        skills: ["Growth Marketing y Growth Hacking", "Gestión de Tráfico Pagado", "E-commerce y Marketing Digital", "Automatización de Marketing", "SEO y Desarrollo Web", "Gestión de Campañas Multicanal", "IA para Marketing"]
+      },
+      education: {
+        title: "FORMACIÓN",
+        degrees: [
+          "Posgrado (en curso): Inteligencia Artificial Aplicada al Growth Marketing",
+          "Licenciatura en Diseño Gráfico - Centro Universitário Estácio de São Paulo"
+        ]
+      },
+      tools: {
+        title: "HERRAMIENTAS DIGITALES",
+        list: "Meta Ads, Google Ads, TikTok Ads, Adobe Suite, DaVinci, Blender, HTML5, Herramientas SEO, Herramientas IA"
+      },
+      languages: {
+        title: "IDIOMAS",
+        list: ["Portugués (Nativo)", "Español (Intermedio)", "Inglés (Básico)"]
+      }
     }
   };
 
@@ -221,6 +272,7 @@ const CVViewer = ({ isOpen, onClose }: CVViewerProps) => {
                 <SelectItem value="pt">🇵🇹 Português</SelectItem>
                 <SelectItem value="en">🇺🇸 English</SelectItem>
                 <SelectItem value="fr">🇫🇷 Français</SelectItem>
+                <SelectItem value="es">🇪🇸 Español</SelectItem>
               </SelectContent>
             </Select>
             <Button onClick={handleExport} variant="outline" className="bg-white text-blue-600 hover:bg-gray-100">
