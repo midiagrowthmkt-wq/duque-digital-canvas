@@ -145,12 +145,10 @@ const Index = () => {
               Everton <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Duque</span>
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-8">
-              Gestor de Tráfego & Designer Digital
+              Designer Gráfico
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12">
-              Especialista em Growth Marketing com mais de 10 anos de experiência. 
-              Responsável por campanhas que geram mais de 100 mil vendas mensais e 
-              criação de soluções SaaS inovadoras com IA.
+              Profissional formado em Design Gráfico com especialização em Inteligência Artificial e Marketing e gestão de mídias pagas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
