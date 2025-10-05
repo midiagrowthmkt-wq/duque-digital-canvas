@@ -121,6 +121,7 @@ const Index = () => {
               <a href="#about" className="text-white/80 hover:text-white transition-colors">Sobre</a>
               <a href="#experience" className="text-white/80 hover:text-white transition-colors">Experiência</a>
               <a href="#cv" className="text-white/80 hover:text-white transition-colors">Currículo</a>
+              <a href="#skills" className="text-white/80 hover:text-white transition-colors">Soft skills</a>
               <a href="#growth" className="text-white/80 hover:text-white transition-colors">Crescimento</a>
               <a href="#social" className="text-white/80 hover:text-white transition-colors">Redes Sociais</a>
               <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contato</a>
@@ -158,8 +159,7 @@ const Index = () => {
                 Ver Projetos
               </Button>
               <Button 
-                variant="outline" 
-                className="border-white/20 text-white hover:bg-white/10 px-8 py-3 text-lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg"
                 onClick={() => setShowCV(true)}
               >
                 <Eye className="w-4 h-4 mr-2" />
@@ -399,7 +399,7 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 px-4">
+      <section id="skills" className="py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">Competências</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
